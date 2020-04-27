@@ -47,13 +47,13 @@ const slider = (slides, dir, prev, next) => {
             paused = setInterval(function() {
                 plusSlides(1);
                 items[slideIndex-1].classList.add('slideInDown');
-            }, 3000);
+            }, 10000);
         } else {
             paused = setInterval(function() {
                 plusSlides(1);
                 items[slideIndex-1].classList.remove('slideInRight');
                 items[slideIndex-1].classList.add('slideInLeft');
-            }, 3000);
+            }, 10000);
         }
     }
     //остановка и старт работы слайдера при наведении мыши
