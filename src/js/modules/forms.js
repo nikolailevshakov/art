@@ -1,4 +1,5 @@
 //import checkNumbInputs from './checkNumbInputs';
+import {postData} from '../services/requests';
 
 const forms = () => {
     const form = document.querySelectorAll('form'),
@@ -21,16 +22,8 @@ const forms = () => {
         question: 'assets/question.php'
     };
 
-// добавили async/await, поэтому скрипт ждет ответ от сервера и let Не будет Undefined
-    const postData = async (url, data) => {
-        // fetch api, ждет пока отработает запрос и запишется в res
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
-// Тоже подождет получение ответа от сервера
-        return await res.text();
-    };
+
+
 // очистка инпутов после использования
     const clearInputs = () => {
         inputs.forEach(item => {
